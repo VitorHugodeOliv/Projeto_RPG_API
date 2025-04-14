@@ -1,18 +1,18 @@
-export type CategoriaEquipamentos = 'Arma' | 'Armadura' | 'Equipamento de Aventura' | 'Ferramenta' | 'Outros';
+type CategoriaEquipamentos = 'Arma' | 'Armadura' | 'Equipamento de Aventura' | 'Ferramenta' | 'Outros';
 
 export interface EquipamentoBase {
     nome: string;
-    descrição?: string;
+    descricao?: string;
     categoria: CategoriaEquipamentos;
     raridade?: string;
     peso: number;
-    preço: number;
+    preco: number;
 };
 
 export interface Arma extends EquipamentoBase {
     categoria: 'Arma';
     dano: string;
-    tipo: 'Corpo a Corpo' | 'Distância';
+    tipo: 'Corpo a Corpo' | 'Distância' | 'Híbrida';
     alcance?: string;
     propriedades?: string[];
 }
